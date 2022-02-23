@@ -13,6 +13,8 @@
   "dependencies": {
     "element-ui": "^2.15.6",
     "less": "^4.1.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "less-loader": "^5.0.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -62,7 +64,9 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0"
   },
   "engines": {
     "node": ">= 6.0.0",

@@ -1,15 +1,16 @@
 <template>
-  <div>
-    <dining-table></dining-table>
-  </div>
+  <el-container>
+    <el-aside width="200px">Aside</el-aside>
+    <el-button type="primary">youma </el-button>
+    <el-main>Main</el-main>
+  </el-container>
 </template>
 
 <script>
-import diningTable from '@/components/diningTable.vue'
 export default {
   name: '',
   components: {
-    diningTable
+
   },
   props: {
 
