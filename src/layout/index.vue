@@ -6,7 +6,8 @@
       </el-aside>
       <el-container>
         <el-header>
-          <h3>{{$route.meta.title}}</h3>
+          <span class="tabStyle">{{tab}}</span>
+          <span class="font">用户名：{{userName.userId}}</span>
         </el-header>
         <el-main class="el-main">
           <router-view></router-view>
@@ -32,11 +33,13 @@ export default {
   },
   data () {
     return {
-
+      userName: JSON.parse(localStorage.getItem('state'))
     }
   },
   computed: {
-
+    tab () {
+      return this.$route.meta.title ? this.$route.meta.title : '堂食'
+    }
   },
   watch: {
 
@@ -69,5 +72,15 @@ export default {
   }
   .main {
     height: 100vh;
+  }
+  .font {
+    color:rgb(135, 181, 219);
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .tabStyle {
+    display: flex;
+    align-items: center
   }
 </style>

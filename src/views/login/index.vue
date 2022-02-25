@@ -51,7 +51,13 @@ export default {
   },
   methods: {
     login () {
-      this.$router.push({ path: '/home' })
+      this.$refs.form.validate(valid => {
+        if (!valid) return false
+
+        this.$router.push({ path: '/home' })
+        this.$store.commit('SET_USER', this.userInfo)
+        console.log('userInfo:', this.$store.state)
+      })
     }
   }
 }
@@ -61,6 +67,7 @@ export default {
 .signIn {
   display: flex;
   justify-items: center;
+  padding: 20% 0 0 40%
 }
 
 </style>

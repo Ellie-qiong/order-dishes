@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import elementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import store from './store'
+import './styles/index.less'
 
 Vue.config.productionTip = false
 
@@ -14,6 +16,7 @@ Vue.use(elementUI)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
