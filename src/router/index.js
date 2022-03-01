@@ -25,14 +25,6 @@ export default new Router({
           component: () => import('../views/forHere/index.vue')
         },
         {
-          path: '/takeOut',
-          name: 'takeOut',
-          meta: {
-            title: '打包'
-          },
-          component: () => import('../views/takeOut/index.vue')
-        },
-        {
           path: '/orderRecord',
           name: 'orderRecord',
           meta: {
@@ -47,8 +39,40 @@ export default new Router({
             title: '收入分析'
           },
           component: () => import('../views/incomeAnalysis/index.vue')
+        },
+        {
+          path: '/userManage',
+          name: 'userManage',
+          meta: {
+            title: '用户管理'
+          },
+          component: () => import('../views/userManage/index.vue'),
+          redirect: '/userManage/userInfo',
+          children: [
+            {
+              path: 'userInfo',
+              name: 'userInfo',
+              meta: {
+                title: '用户信息'
+              },
+              component: () => import('../views/userManage/userInfo/index.vue')
+            },
+            {
+              path: 'userUp',
+              name: 'userUp',
+              meta: {
+                title: '用户注册'
+              },
+              component: () => import('../views/userManage/userUp/index.vue')
+            }
+          ]
         }
       ]
+    },
+    {
+      path: '/menu',
+      name: 'menu',
+      component: () => import('../views/menu/index.vue')
     }
   ]
 })

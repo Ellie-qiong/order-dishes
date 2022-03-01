@@ -1,7 +1,12 @@
+@import url('https://at.alicdn.com/t/font_3210419_ly6n8z6op1.css?spm=a313x.7781069.1998910419.53&file=font_3210419_ly6n8z6op1.css');
 * {
   margin: 0;
   padding: 0;
 }
 .button {
   margin: 4px 4px 4px 4px;
+}
+.menuCard {
+  width: 120px;
+  height: 100px;
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    打包
+    <router-view></router-view>
   </div>
 </template>
 
