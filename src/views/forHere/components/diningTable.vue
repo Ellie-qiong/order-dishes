@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     setDishes () {
-      this.$router.push('../views/menu/index.vue')
+      this.$router.push('/menu')
     }
   }
 }

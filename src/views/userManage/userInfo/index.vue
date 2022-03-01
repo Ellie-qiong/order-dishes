@@ -1,15 +1,14 @@
 <template>
   <div>
-    <dining-table></dining-table>
+    用户基本信息
   </div>
 </template>
 
 <script>
-import diningTable from './components/diningTable.vue'
 export default {
   name: '',
   components: {
-    diningTable
+
   },
   props: {
 
