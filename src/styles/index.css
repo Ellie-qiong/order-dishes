@@ -1,7 +1,11 @@
-@import url('https://at.alicdn.com/t/font_3210419_ly6n8z6op1.css?spm=a313x.7781069.1998910419.53&file=font_3210419_ly6n8z6op1.css');
+@import url('https://at.alicdn.com/t/font_3210419_3dlw16nqmgy.css?spm=a313x.7781069.1998910419.90&file=font_3210419_3dlw16nqmgy.css');
 * {
   margin: 0;
   padding: 0;
+}
+body {
+  background-color: #E9EEF3;
+  color: #333;
 }
 .button {
   margin: 4px 4px 4px 4px;
@@ -9,4 +13,23 @@
 .menuCard {
   width: 120px;
   height: 100px;
+}
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+}
+.iconfont {
+  font-size: 30px;
+}
+.box-card {
+  text-align: center;
+}
+.box-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.come_back_btn {
+  font-size: 20px;
+  margin: 10px;
 }

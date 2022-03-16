@@ -44,18 +44,6 @@ export default {
 
     }
   },
-  computed: {
-
-  },
-  watch: {
-
-  },
-  created () {
-
-  },
-  mounted () {
-
-  },
   methods: {
 
   }
@@ -63,6 +51,15 @@ export default {
 </script>
 
 <style >
+.demo {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 300px
+}
+.iconfont {
+  font-size: 30px;
+}
 .el-menu-item {
   font-size: 16px;
   height: 80px;
@@ -74,12 +71,11 @@ export default {
   border-bottom-color: none !important;
 }
 .el-menu-item:hover{
-    color: #1787FB !important;
-    background-color: rgb(243, 240, 240)
+  color: #1787FB !important;
+  background-color: rgb(243, 240, 240)
 }
-
- .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 100%;
-    min-height: 100%;
-  }
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 100%;
+  min-height: 100%;
+}
 </style>

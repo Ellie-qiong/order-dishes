@@ -1,24 +1,21 @@
 <template>
   <div>
     <el-container class="main">
-      <el-aside class="aside">
+      <div class="aside">
         <my-aside :isCollapse="isCollapse"></my-aside>
-      </el-aside>
-      <el-container class="context">
-        <el-main class="el-main">
-          <div class="header">
-          <span v-if="isCollapse"  @click="closeMenu">
-          <i class="iconfont icon-zhankaicaidan"></i>
-          </span>
-          <span v-else @click="openMenu">
-            <i class="iconfont icon-shouqicaidan"></i>
-          </span>
-          <span>{{tab}}</span>
+      </div>
+      <div class="main-style" :class="{isActive: isCollapse}">
+        <div class="header">
+          <div class="left-icon" @click="changeCollapse">
+            <i v-if="isCollapse" class="iconfont icon-zhankaicaidan"></i>
+            <i v-else class="iconfont icon-shouqicaidan" ></i>
+            isCollapse{{isCollapse}}
+            <span>{{tab}}</span>
+          </div>
           <span class="font">用户名：{{userName.userId}}</span>
         </div>
-          <router-view></router-view>
-        </el-main>
-      </el-container>
+        <router-view></router-view>
+      </div>
     </el-container>
   </div>
 </template>
@@ -50,15 +47,13 @@ export default {
     }
   },
   methods: {
-    // 关闭菜单
-    closeMenu () {
-      this.showMenu = !this.showMenu
-      this.isCollapse = !this.isCollapse
+    a () {
+      console.log('ok')
     },
-    // 展开菜单
-    openMenu () {
-      this.showMenu = !this.showMenu
+    // 关闭菜单
+    changeCollapse () {
       this.isCollapse = !this.isCollapse
+      console.log('dianji', this.isCollapse)
     }
   }
 }
@@ -67,18 +62,20 @@ export default {
 <style lang="less" scoped>
 
   .main {
-    height: 100vh;
     .aside {
     background-color: #D3DCE6;
     color: #333;
-    text-align: center
-  }
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
     text-align: center;
-    line-height: 100%;
-  }
+    }
+  .main-style {
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    margin-left: 300px;
+    }
+    .isActive {
+      margin-left: 64px !important
+    }
   }
   .font {
     color:rgb(135, 181, 219);
@@ -88,8 +85,12 @@ export default {
   }
   .header {
     background-color: #576e88;
+    height: 60px;
+    .left-icon {
+    display: flex;
+    justify-items: left;
+    font-size: 25px;
+    }
   }
-  .iconfont{
-       font-size: 30px;
-  }
+
 </style>
