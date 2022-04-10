@@ -32,7 +32,19 @@ export default {
         {price: 16, dishName: '地三鲜', number: 1},
         {price: 86, dishName: '大盘鸡', number: 1},
         {price: 18, dishName: '蒜蓉油麦菜', number: 1},
-        {price: 18, dishName: '红烧茄子', number: 1}
+        {price: 18, dishName: '红烧茄子', number: 1},
+        {price: 29, dishName: '素三鲜', number: 1},
+        {price: 16, dishName: '蒜蓉西兰花', number: 1},
+        {price: 86, dishName: '红烧肉', number: 1},
+        {price: 18, dishName: '卤牛肉', number: 1},
+        {price: 29, dishName: '凉拌黄瓜', number: 1},
+        {price: 16, dishName: '酸菜鱼', number: 1},
+        {price: 86, dishName: '鸡蛋豆腐', number: 1},
+        {price: 18, dishName: '酸辣土豆丝', number: 1},
+        {price: 29, dishName: '红烧腐竹', number: 1},
+        {price: 16, dishName: '烤鱼', number: 1},
+        {price: 86, dishName: '麻辣虾尾', number: 1},
+        {price: 18, dishName: '干锅虾', number: 1}
       ],
       dishNumber: 1
     }

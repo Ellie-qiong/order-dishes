@@ -2,14 +2,19 @@
   <el-container>
     <el-aside>
       <el-button type="text" @click="comeBack()" class="come_back_btn"><i class="iconfont icon-houtui"></i><span>返回主页</span></el-button>
-      <el-descriptions title="已点菜品" :column="1" border>
-        <el-descriptions-item v-for="(item, index) in checkedDish" :key="index" :label="index+1">
-          <span>{{item.dishName}}</span>
-          <span>*{{item.number}}份</span>
-          <span>{{item.price * item.number}}元</span>
-          <el-button type="primary" @click="deleteDish(item)" class="del-btn" size="mini">取消</el-button>
-          </el-descriptions-item>
-      </el-descriptions>
+      <div class="aside-style">
+        <div class="dish-content">
+          <el-descriptions title="已点菜品" :column="1" border>
+            <el-descriptions-item v-for="(item, index) in checkedDish" :key="index" :label="index+1">
+              <span>{{item.dishName}}</span>
+              <span>*{{item.number}}份</span>
+              <span>{{item.price * item.number}}元</span>
+              <el-button type="primary" @click="deleteDish(item)" class="del-btn" size="mini">取消</el-button>
+              </el-descriptions-item>
+          </el-descriptions>
+        </div>
+        <el-button class="dish-ok-btn" type="primary" @click="dishOk">下单</el-button>
+      </div>
     </el-aside>
     <el-main>
       <el-tabs tab-position="left">
@@ -63,6 +68,9 @@ export default {
       }).then(() => {
         this.$router.push('/forHere')
       })
+    },
+    dishOk () {
+      console.log('提交订单')
     }
   }
 }
@@ -81,8 +89,22 @@ export default {
 .card-footer {
   display: inline-block
 }
-
+.aside-style{
+  height: 83vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.dish-content{
+  overflow: auto;
+  flex: 1;
+}
 .del-btn {
   float: right;
+}
+.dish-ok-btn {
+  position:fixed;
+  bottom: 3vh;
+  left: 6vw;
 }
 </style>
