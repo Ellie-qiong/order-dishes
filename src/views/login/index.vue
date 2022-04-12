@@ -5,8 +5,8 @@
         <el-form-item label="账号：" prop="userId">
           <el-input v-model="userInfo.userId" placeholder="请输入用户手机号"></el-input>
         </el-form-item>
-        <el-form-item label="密码：" prop="userPassword">
-          <el-input v-model="userInfo.userPassword" placeholder="请输入用户密码"></el-input>
+        <el-form-item label="密码：" prop="userPassword" >
+          <el-input type="password" v-model="userInfo.userPassword" placeholder="请输入用户密码" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="login">登录</el-button>
