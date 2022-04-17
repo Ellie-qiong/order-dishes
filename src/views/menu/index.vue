@@ -19,7 +19,8 @@
     <el-main>
       <el-tabs tab-position="left">
         <el-tab-pane label="热菜">
-          <host-dish @addDish="addDish"></host-dish>
+          <host-dish @addDish="addDish">
+          </host-dish>
         </el-tab-pane>
         <el-tab-pane label="凉菜">凉菜</el-tab-pane>
         <el-tab-pane label="饮料">饮料</el-tab-pane>
@@ -70,7 +71,16 @@ export default {
       })
     },
     dishOk () {
-      console.log('提交订单')
+      let params = {
+        checkedDish: this.checkedDish,
+        nowHall: this.$route.query.nowHall
+      }
+      this.$axios.post('http://localhost:3000/selectMenu', params).then(() => {
+        this.$message({
+          message: '订单已经提交！',
+          type: 'success'
+        })
+      })
     }
   }
 }

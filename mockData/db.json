@@ -1,21 +1,64 @@
 {
-	"contacts":[
-		{"id":1,"name":"tianyq","phone_number":15419739337},
-		{"id":2,"name":"Isabella","phone_number":17730908840}
-	],
-	"phone_log":[
-		{
-			"id":1,
-			"records":[
-				{"time":"2020-09-05 07:11:57","talk_time":48},
-				{"time":"2020-05-11 21:40:02","talk_time":413}
-			]
-		},
-		{
-			"id":2,
-			"records":[
-				{"time":"2019-02-14 15:00:44","talk_time":107}
-			]
-		}
-	]
+  "selectMenu": [
+    {
+      "id": 1,
+      "menu": [
+        {
+          "name": "",
+          "price": 1
+        }
+      ]
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 18,
+          "dishName": "干锅虾",
+          "number": 1
+        }
+      ],
+      "nowHall": "2",
+      "id": 2
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        }
+      ],
+      "nowHall": "2",
+      "id": 4
+    }
+  ],
+  "hallNumList": [
+    {
+      "hallNum": 1
+    },
+    {
+      "hallNum": 2
+    },
+    {
+      "hallNum": 3
+    },
+    {
+      "hallNum": 4
+    }
+  ]
 }
