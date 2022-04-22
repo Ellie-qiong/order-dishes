@@ -53,7 +53,6 @@ export default {
     // 关闭菜单
     changeCollapse () {
       this.isCollapse = !this.isCollapse
-      console.log('dianji', this.isCollapse)
     }
   }
 }
@@ -69,7 +68,7 @@ export default {
     }
   .main-style {
     text-align: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     margin-left: 300px;
     }

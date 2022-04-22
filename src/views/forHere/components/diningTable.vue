@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="hall-num">
     <div v-for="(item, index) in hallList" :key="index">
-      <el-card class="card">
+      <el-card  class="card">
         <div slot="header">{{item.hallNum}}号大厅</div>
           <div>
             <el-button class="button" size="mini" type="primary" @click="setDishes(item.hallNum)">点菜</el-button>
@@ -59,7 +59,12 @@ export default {
 
 <style lang="less" scoped>
 .card {
-  width:20%;
-  height: 20%;
+  width:300px;
+  height: 150px;
+  margin: 10px
+}
+.hall-num {
+  display: flex;
+  justify-content: space-around;
 }
 </style>

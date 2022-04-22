@@ -9,46 +9,38 @@
               <span>{{item.dishName}}</span>
               <span>*{{item.number}}份</span>
               <span>{{item.price * item.number}}元</span>
-              <el-button type="primary" @click="deleteDish(item)" class="del-btn" size="mini">取消</el-button>
+              <el-button v-if="isClose" type="primary" @click="deleteDish(item)" class="del-btn" size="mini">取消</el-button>
               </el-descriptions-item>
           </el-descriptions>
         </div>
-        <el-button class="dish-ok-btn" type="primary" @click="dishOk">下单</el-button>
+        <div class="dish-ok-btn">
+          <el-button  v-if="isEdit" type="primary" @click="dishEdit">编辑菜单</el-button>
+          <el-button type="primary" @click="closeDishEdit">退出编辑</el-button>
+          <el-button type="primary" @click="dishOk">下单</el-button>
+        </div>
       </div>
     </el-aside>
     <el-main>
-      <el-tabs tab-position="left">
-        <el-tab-pane label="热菜">
-          <host-dish @addDish="addDish">
-          </host-dish>
-        </el-tab-pane>
-        <el-tab-pane label="凉菜">凉菜</el-tab-pane>
-        <el-tab-pane label="饮料">饮料</el-tab-pane>
-        <el-tab-pane label="香烟">香烟</el-tab-pane>
-        <el-tab-pane label="赠送">赠送</el-tab-pane>
-        <el-tab-pane label="兑奖">兑奖</el-tab-pane>
-      </el-tabs>
+      <main-dish @addDish="addDish"></main-dish>
     </el-main>
   </el-container>
 </template>
 
 <script>
-import hostDish from './hostDish.vue'
+import mainDish from './mainDish.vue'
 export default {
-  name: '',
   components: {
-    hostDish
-  },
-  props: {
-
+    mainDish
   },
   data () {
     return {
-      checkedDish: []
+      // 已点菜品
+      checkedDish: [],
+      isEdit: false,
+      isClose: true
     }
   },
   methods: {
-    // 增加消费
     addDish (val) {
       if (!this.checkedDish.includes(val)) {
         this.checkedDish.push(val)
@@ -62,25 +54,45 @@ export default {
       }
     },
     comeBack () {
-      this.$confirm('所选菜品还未保存，是否离开？', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-      }).then(() => {
-        this.$router.push('/forHere')
-      })
-    },
-    dishOk () {
-      let params = {
-        checkedDish: this.checkedDish,
-        nowHall: this.$route.query.nowHall
-      }
-      this.$axios.post('http://localhost:3000/selectMenu', params).then(() => {
-        this.$message({
-          message: '订单已经提交！',
-          type: 'success'
+      if (this.checkedDish.length || !this.isClose) {
+        this.$confirm('所选菜品还未保存，是否离开？', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$router.push('/forHere')
         })
-      })
+      } else {
+        this.$router.push('/forHere')
+      }
+    },
+    async dishOk () {
+      if (!this.checkedDish.length) {
+        this.$message({
+          message: '不能提交空单',
+          type: 'warning'
+        })
+        return false
+      } else {
+        let params = {
+          checkedDish: this.checkedDish,
+          nowHall: this.$route.query.nowHall
+        }
+        await this.$axios.post('http://localhost:3000/selectMenu', params).then(() => {
+          this.$message({
+            message: '订单已经提交！',
+            type: 'success'
+          })
+        })
+        this.isEdit = true
+        this.isClose = false
+      }
+    },
+    dishEdit () {
+      this.isClose = true
+    },
+    closeDishEdit () {
+      this.isClose = false
     }
   }
 }

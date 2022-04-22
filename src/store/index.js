@@ -5,14 +5,16 @@ Vue.use(vueX)
 
 const store = new vueX.Store({
   state: {
-    userId: '',
-    userPassword: ''
+    userName: '',
+    password: '',
+    role: ''
   },
   mutations: {
     // 保存用户信息
     SET_USER (state, payload) {
-      state.userId = payload.userId
-      state.userPassword = payload.userPassword
+      state.userName = payload.userName
+      state.password = payload.password
+      state.role = payload.role
       localStorage.setItem('state', JSON.stringify(state))
     }
   },

@@ -45,6 +45,54 @@
       ],
       "nowHall": "2",
       "id": 4
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 29,
+          "dishName": "麻婆豆腐",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 5
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 29,
+          "dishName": "麻婆豆腐",
+          "number": 1
+        },
+        {
+          "price": 16,
+          "dishName": "地三鲜",
+          "number": 1
+        }
+      ],
+      "nowHall": "2",
+      "id": 6
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 16,
+          "dishName": "地三鲜",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 7
     }
   ],
   "hallNumList": [
@@ -59,6 +107,128 @@
     },
     {
       "hallNum": 4
+    }
+  ],
+  "dishMenu": [
+    {
+      "dishType": "热菜",
+      "dishList": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        },
+        {
+          "price": 29,
+          "dishName": "麻婆豆腐",
+          "number": 1
+        },
+        {
+          "price": 16,
+          "dishName": "地三鲜",
+          "number": 1
+        },
+        {
+          "price": 86,
+          "dishName": "大盘鸡",
+          "number": 1
+        },
+        {
+          "price": 18,
+          "dishName": "蒜蓉油麦菜",
+          "number": 1
+        },
+        {
+          "price": 18,
+          "dishName": "红烧茄子",
+          "number": 1
+        },
+        {
+          "price": 29,
+          "dishName": "素三鲜",
+          "number": 1
+        },
+        {
+          "price": 16,
+          "dishName": "蒜蓉西兰花",
+          "number": 1
+        },
+        {
+          "price": 86,
+          "dishName": "红烧肉",
+          "number": 1
+        },
+        {
+          "price": 18,
+          "dishName": "卤牛肉",
+          "number": 1
+        },
+        {
+          "price": 29,
+          "dishName": "凉拌黄瓜",
+          "number": 1
+        },
+        {
+          "price": 16,
+          "dishName": "酸菜鱼",
+          "number": 1
+        },
+        {
+          "price": 86,
+          "dishName": "鸡蛋豆腐",
+          "number": 1
+        },
+        {
+          "price": 18,
+          "dishName": "酸辣土豆丝",
+          "number": 1
+        },
+        {
+          "price": 29,
+          "dishName": "红烧腐竹",
+          "number": 1
+        },
+        {
+          "price": 16,
+          "dishName": "烤鱼",
+          "number": 1
+        },
+        {
+          "price": 86,
+          "dishName": "麻辣虾尾",
+          "number": 1
+        },
+        {
+          "price": 18,
+          "dishName": "干锅虾",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "dishType": "凉菜",
+      "dishList": [
+        {
+          "price": 9,
+          "dishName": "砂糖西红柿",
+          "number": 1
+        },
+        {
+          "price": 8,
+          "dishName": "凉拌黄瓜",
+          "number": 1
+        },
+        {
+          "price": 12,
+          "dishName": "",
+          "number": 1
+        }
+      ]
     }
   ]
 }

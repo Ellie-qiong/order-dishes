@@ -1,0 +1,16 @@
+{
+  "userConfig": [
+    {
+      "id": 0,
+      "userName": "jerry",
+      "password": "123",
+      "role": "superAdmin"
+    },
+    {
+      "id": 1,
+      "userName": "ellie",
+      "password": "123",
+      "role": "commonAdmin"
+    }
+  ]
+}

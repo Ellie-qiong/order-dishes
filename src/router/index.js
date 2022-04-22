@@ -4,7 +4,7 @@ import layOut from '../layout/index.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -76,3 +76,12 @@ export default new Router({
     }
   ]
 })
+router.beforeEach((from, to, next) => {
+  let role = localStorage.getItem('state').role
+  if (role === 'superAdmin' || role === 'commonAdmin') {
+
+  }
+  next()
+})
+
+export default router

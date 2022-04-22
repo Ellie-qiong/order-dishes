@@ -11,25 +11,10 @@ export default {
   components: {
     diningTable
   },
-  props: {
-
-  },
   data () {
     return {
 
     }
-  },
-  computed: {
-
-  },
-  watch: {
-
-  },
-  created () {
-
-  },
-  mounted () {
-
   },
   methods: {
 
