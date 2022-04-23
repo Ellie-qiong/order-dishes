@@ -55,7 +55,7 @@ export default {
         if (!valid) {
           return false
         }
-        await this.$axios.get('http://localhost:3005/userConfig?userName=' + this.userInfo.userId).then(res => {
+        await this.$axios.get('http://localhost:3007/userConfig?userName=' + this.userInfo.userId).then(res => {
           this.$router.push({ path: '/home' })
           this.$store.commit('SET_USER', res.data[0])
         }).catch()

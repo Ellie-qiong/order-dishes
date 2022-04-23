@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import layOut from '../layout/index.vue'
+import config from './config'
 
 Vue.use(Router)
 
@@ -76,12 +77,6 @@ const router = new Router({
     }
   ]
 })
-router.beforeEach((from, to, next) => {
-  let role = localStorage.getItem('state').role
-  if (role === 'superAdmin' || role === 'commonAdmin') {
-
-  }
-  next()
-})
+config(router)
 
 export default router
