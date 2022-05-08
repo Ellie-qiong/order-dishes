@@ -14,7 +14,6 @@ const router = new Router({
     },
     {
       path: '/home',
-      name: 'home',
       component: layOut,
       children: [
         {
@@ -74,6 +73,11 @@ const router = new Router({
       path: '/menu',
       name: 'menu',
       component: () => import('../views/menu/index.vue')
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: () => import('../views/404.vue')
     }
   ]
 })

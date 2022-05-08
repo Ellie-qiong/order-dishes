@@ -93,6 +93,226 @@
       ],
       "nowHall": "1",
       "id": 7
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 8
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 9
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        },
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 10
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        },
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 11
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 12
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 13
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 14
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 15
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 16
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 17
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 18
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 19
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 1
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 1
+        }
+      ],
+      "nowHall": "1",
+      "id": 20
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 2
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 2
+        }
+      ],
+      "nowHall": "1",
+      "id": 21
+    },
+    {
+      "checkedDish": [
+        {
+          "price": 35,
+          "dishName": "鱼香肉丝",
+          "number": 2
+        },
+        {
+          "price": 36,
+          "dishName": "宫保鸡丁",
+          "number": 2
+        }
+      ],
+      "nowHall": "1",
+      "id": 22
     }
   ],
   "hallNumList": [

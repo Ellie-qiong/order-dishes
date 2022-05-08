@@ -9,10 +9,9 @@
           <div class="left-icon" @click="changeCollapse">
             <i v-if="isCollapse" class="iconfont icon-zhankaicaidan"></i>
             <i v-else class="iconfont icon-shouqicaidan" ></i>
-            isCollapse{{isCollapse}}
-            <span>{{tab}}</span>
+            <span>{{this.$route.meta.title}}</span>
           </div>
-          <span class="font">用户名：{{userName.userId}}</span>
+          <span class="font">用户名：{{role.userName}}</span>
         </div>
         <router-view></router-view>
       </div>
@@ -36,20 +35,12 @@ export default {
   },
   data () {
     return {
-      userName: JSON.parse(localStorage.getItem('state')),
+      role: JSON.parse(localStorage.getItem('state')),
       // 展开收起菜单
       isCollapse: false
     }
   },
-  computed: {
-    tab () {
-      return this.$route.meta.title ? this.$route.meta.title : '堂食'
-    }
-  },
   methods: {
-    a () {
-      console.log('ok')
-    },
     // 关闭菜单
     changeCollapse () {
       this.isCollapse = !this.isCollapse

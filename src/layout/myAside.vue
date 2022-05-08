@@ -1,5 +1,5 @@
 <template>
-  <div class="demo">
+  <div class="demo" :class="{active: isCollapse}">
     <el-menu
       default-active="forHere"
       router
@@ -50,12 +50,15 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 .demo {
   position: fixed;
   top: 0;
   bottom: 0;
   width: 300px
+}
+.active {
+  width: 64px;
 }
 .iconfont {
   font-size: 30px;

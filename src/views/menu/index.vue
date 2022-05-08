@@ -14,7 +14,7 @@
           </el-descriptions>
         </div>
         <div class="dish-ok-btn">
-          <el-button  v-if="isEdit" type="primary" @click="dishEdit">编辑菜单</el-button>
+          <el-button type="primary" @click="dishEdit">编辑菜单</el-button>
           <el-button type="primary" @click="closeDishEdit">退出编辑</el-button>
           <el-button type="primary" @click="dishOk">下单</el-button>
         </div>
@@ -36,8 +36,9 @@ export default {
     return {
       // 已点菜品
       checkedDish: [],
-      isEdit: false,
-      isClose: true
+      isClose: true,
+      // 是否下单
+      isDish: false
     }
   },
   methods: {
@@ -45,6 +46,7 @@ export default {
       if (!this.checkedDish.includes(val)) {
         this.checkedDish.push(val)
       }
+      this.isDish = true
     },
     // 取消已选菜品
     deleteDish (item) {
@@ -52,9 +54,10 @@ export default {
         let area = this.checkedDish.indexOf(item)
         this.checkedDish.splice(area, 1)
       }
+      this.isDish = true
     },
     comeBack () {
-      if (this.checkedDish.length || !this.isClose) {
+      if (this.isDish) {
         this.$confirm('所选菜品还未保存，是否离开？', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
@@ -84,15 +87,17 @@ export default {
             type: 'success'
           })
         })
-        this.isEdit = true
         this.isClose = false
       }
+      this.isDish = false
     },
     dishEdit () {
       this.isClose = true
+      this.isDish = true
     },
     closeDishEdit () {
       this.isClose = false
+      this.isDish = false
     }
   }
 }
